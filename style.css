@@ -9,8 +9,10 @@
     --groen-geselecteerd: rgba(13, 61, 53, 0.35);
     --rood: rgb(208, 43, 33);
 
-    /* Opacity varianten */
+    /* Opacity */
     --beige-35: rgba(244, 237, 210, 0.35);
+    --zwart-35: rgb(16, 16, 16, 0.35);
+    --groen-35: rgb(13, 61, 53, 0.35);
 }
 
 body {
@@ -96,9 +98,8 @@ header h1 {
  * ================================================================================
 * */
 section {
-    min-height: 70svh;
-    border-top: 0.5rem solid var(--rood);
-    border-bottom: 0.5rem solid var(--rood);
+    min-height: 20svh;
+    padding: 4rem 0;
 }
 
 section.groene-achtergrond {
@@ -107,6 +108,8 @@ section.groene-achtergrond {
 
 section.beige-achtergrond {
     background: var(--beige);
+    border-top: 0.5rem solid var(--rood);
+    border-bottom: 0.5rem solid var(--rood);
 }
 
 /* *
@@ -115,21 +118,22 @@ section.beige-achtergrond {
  * ================================================================================
 * */
 section h2 {
-    margin-bottom: 1rem;
     width: 40rem;
     font-weight: 400;
     display: flex;
     align-items: center;
     white-space: nowrap;
     gap: 1rem;
-    margin: 2rem auto;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
 }
 
 section h2 span{
     display: inline-block;
     height: 1px;
     width: 20rem;
-    background: var(--beige-35);
 }
 
 section h2 span:nth-of-type(1) {
@@ -144,33 +148,184 @@ section h2 span:nth-of-type(2) {
     transform: translateY(-50%);
 }
 
+section.groene-achtergrond h2,
+section.groene-achtergrond h2 {
+    color: var(--beige-35);
+}
+
+section.groene-achtergrond h2 span:nth-of-type(1),
+section.groene-achtergrond h2 span:nth-of-type(2) {
+    background: var(--beige-35);
+}
+
+section.beige-achtergrond h2 span:nth-of-type(1),
+section.beige-achtergrond h2 span:nth-of-type(2) {
+    background: var(--zwart-35);
+}
+
 /* *
  * ================================================================================
  * Gewichten & stijlen sectie
  * ================================================================================
 * */
-section#gewichten-stijlen {
+section#verschillende-stijlen {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    color: var(--beige);
+    color: var(--groen);
 }
 
-section#gewichten-stijlen div {
+section#verschillende-stijlen ul li {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: baseline;
     width: 60rem;
-    border-bottom: 1px solid var(--beige-35);
+    border-bottom: 1px solid var(--groen-35);
+    list-style: none;
 }
-section#gewichten-stijlen div p:first-of-type {
+
+section#verschillende-stijlen li {
+    display: inline-block;
+}
+
+section#verschillende-stijlen li p:first-of-type {
     font-size: 1rem;
     font-style: italic;
 }
-section#gewichten-stijlen div p:last-of-type {
+section#verschillende-stijlen li p:last-of-type {
     font-size: 2.4rem;
 }
+
+section#verschillende-stijlen li:nth-of-type(1) p:last-of-type {
+    font-weight: 400;
+}
+
+section#verschillende-stijlen li:nth-of-type(2) p:last-of-type {
+    font-weight: 400;
+    font-style: italic;
+}
+
+section#verschillende-stijlen li:nth-of-type(1) p:last-of-type {
+    font-weight: 400;
+}
+
+section#verschillende-stijlen li:nth-of-type(2) p:last-of-type {
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* *
+ * ================================================================================
+ * Tekens sectie
+ * ================================================================================
+* */
+section.tekens {
+    padding: 12rem 0;
+}
+
+section.tekens ul {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 70vw;
+    margin: auto;
+    list-style: none;
+}
+
+section.tekens ul li { 
+    color: var(--beige);
+    font-size: 5rem;
+    font-weight: 700;
+    transition: .2s;
+    cursor: default;
+    padding: 0 1rem;
+    display: inline-block;
+    opacity: 0.2;
+}
+
+section.tekens.beige-achtergrond ul li { 
+    color: var(--groen);
+}
+
+section.tekens ul li:hover {
+    color: var(--rood);
+    opacity: 1;
+}
+
+/* *
+ * ================================================================================
+ * Cijfers sectie
+ * ================================================================================
+* */
+section#cijfers {
+    padding: 12rem 0;
+}
+
+section#cijfers ul {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 70vw;
+    margin: auto;
+    list-style: none;
+}
+
+section#cijfers ul li { 
+    color: var(--beige);
+    font-size: 5rem;
+    font-weight: 700;
+    transition: .2s;
+    cursor: default;
+    padding: 0 1rem;
+    display: inline-block;
+    opacity: 0.2;
+}
+
+section#cijfers.beige-achtergrond ul li { 
+    color: var(--groen);
+}
+
+section#cijfers ul li:hover {
+    color: var(--rood);
+    opacity: 1;
+}
+
+/* *
+ * ================================================================================
+ * Lettergrootte
+ * ================================================================================
+* */
+section#lettergrootte ul {
+    width: 100%;
+    max-width: 50vw;
+    margin: auto;
+    list-style: none;
+}
+section#lettergrootte li {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    margin-bottom: 2rem;
+    align-items: baseline;
+    flex-flow: row;
+}
+
+section#lettergrootte li span {
+    font-size: 1rem;
+}
+
+section#lettergrootte li:nth-of-type(1) { font-size: 4rem; }
+section#lettergrootte li:nth-of-type(2) { font-size: 3.5rem; }
+section#lettergrootte li:nth-of-type(3) { font-size: 3rem; }
+section#lettergrootte li:nth-of-type(4) { font-size: 2.5rem; }
+section#lettergrootte li:nth-of-type(5) { font-size: 2rem; }
+section#lettergrootte li:nth-of-type(6) { font-size: 1rem; }
+
 
 form {
     display: flex;
