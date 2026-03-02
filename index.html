@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gill Sans</h1>
+        <span id="lijn"></span>
+
+        <p>Ontworpen door Eric Gill</p>
+
+        <span id="eerste-border"></span>
+        <span id="tweede-border"></span>
+        <span id="jaartal">1928</span>
+    </header>
+
+    <main>
+        <section class="beige-achtergrond">
+    
+        </section>
+
+        <section id="gewichten-stijlen" class="groene-achtergrond">
+            <h2> 
+                <span></span>
+                Gewichten & stijlen 
+                <span></span>
+            </h2>
+
+            <div class="font-dikte-regular">
+                <p>Regular</p>
+                <p>De snelle bruine vos springt over de luie hond</p>
+            </div>
+
+            <div class="font-dikte-regular-italic">
+                <p>Regular italic</p>
+                <p>De snelle bruine vos springt over de luie hond</p>
+            </div>
+
+            <div class="font-dikte-bold">
+                <p>Bold</p>
+                <p>De snelle bruine vos springt over de luie hond</p>
+            </div>
+        </section>
+
+        <section id="tekensets" class="beige-achtergrond">
+            <h2> 
+                <span></span>
+                Tekenset - hoofdletters
+                <span></span>
+            </h2>
+        </section>
+    </main>
+
+    <form>
+        <input type="text" name="text" id="text-input" placeholder="Type iets!">
+
+        <fieldset id="font-weights">
+            <div>
+                <label for="font-weight">Font weigt</label>
+                <input type="range" value="400" name="font-weight" min="400" max="700" id="font-weight">
+            </div>
+
+            <div>
+                <input type="checkbox" name="font-style" id="font-style">
+                <label for="font-style">Italic</label>
+            </div>
+        </fieldset>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
