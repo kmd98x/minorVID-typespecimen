@@ -339,6 +339,7 @@ form {
     justify-content: center;
     gap: 0.5rem;
     padding: 5rem 0;
+    background-color: var(--groen);
 }
 
 #text-input {
@@ -354,8 +355,8 @@ form {
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder */
-#input-text::placeholder {
-    color: var(--rood);
+#text-input::placeholder {
+    color: var(--beige);
     opacity: 0.2;
 }
 
@@ -390,13 +391,16 @@ fieldset div:nth-of-type(3) {
 fieldset div:nth-of-type(2) input {
     display: none;
 }
+fieldset div label {
+    color: var(--beige);
+}
 
 fieldset div:nth-of-type(2) label {
     padding: 0.5rem 1.5rem;
     display: block;
-    border: 1px solid var(--groen);
+    border: 1px solid var(--beige);
     border-radius: 5px;
-    color: var(--groen);
+    color: var(--beige);
     transition: .5s;
 }
 
