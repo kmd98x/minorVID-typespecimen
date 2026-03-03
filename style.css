@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+/*
+ * Reminder voor mezelf: Ontdekking van variabele fonts
+ * https://www.grillitype.com/blog/guides/introduction-variable-fonts
+ * https://fonts.google.com/knowledge/introducing_type/introducing_variable_fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap');
 
 :root {
     --zwart: rgb(16, 16, 16);
@@ -6,7 +11,6 @@
 
     --beige: rgb(244, 237, 210);
     --groen: rgb(13, 61, 53);
-    --groen-geselecteerd: rgba(13, 61, 53, 0.35);
     --rood: rgb(208, 43, 33);
 
     /* Opacity */
@@ -23,11 +27,11 @@ body {
     font-family: "Cabin", sans-serif;
 }
 
-/* *
+/*
  * ================================================================================
  * Header sectie
  * ================================================================================
-* */
+*/
 header {
     background: var(--groen);
     height: 100svh;
@@ -93,11 +97,11 @@ header h1 {
     line-height: 0;
 }
 
-/* *
+/*
  * ================================================================================
  * Sections
  * ================================================================================
-* */
+*/
 section {
     min-height: 20svh;
     padding: 4rem 0;
@@ -113,11 +117,11 @@ section.beige-achtergrond {
     border-bottom: 0.5rem solid var(--rood);
 }
 
-/* *
+/*
  * ================================================================================
  * h2 styling
  * ================================================================================
-* */
+*/
 section h2 {
     width: 40rem;
     font-weight: 400;
@@ -164,11 +168,11 @@ section.beige-achtergrond h2 span:nth-of-type(2) {
     background: var(--zwart-35);
 }
 
-/* *
+/*
  * ================================================================================
  * Gewichten & stijlen sectie
  * ================================================================================
-* */
+*/
 section#verschillende-stijlen {
     display: flex;
     align-items: center;
@@ -208,20 +212,38 @@ section#verschillende-stijlen li:nth-of-type(2) p:last-of-type {
     font-style: italic;
 }
 
-section#verschillende-stijlen li:nth-of-type(1) p:last-of-type {
-    font-weight: 400;
+section#verschillende-stijlen li:nth-of-type(3) p:last-of-type {
+    font-weight: 500;
 }
 
-section#verschillende-stijlen li:nth-of-type(2) p:last-of-type {
-    font-weight: 400;
+section#verschillende-stijlen li:nth-of-type(4) p:last-of-type {
+    font-weight: 500;
     font-style: italic;
 }
 
-/* *
+section#verschillende-stijlen li:nth-of-type(5) p:last-of-type {
+    font-weight: 600;
+}
+
+section#verschillende-stijlen li:nth-of-type(6) p:last-of-type {
+    font-weight: 600;
+    font-style: italic;
+}
+
+section#verschillende-stijlen li:nth-of-type(7) p:last-of-type {
+    font-weight: 700;
+}
+
+section#verschillende-stijlen li:nth-of-type(8) p:last-of-type {
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*
  * ================================================================================
  * Tekens sectie
  * ================================================================================
-* */
+*/
 section.tekens {
     padding: 12rem 0;
 }
@@ -232,7 +254,7 @@ section.tekens ul {
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    max-width: 70vw;
+    max-width: 80rem;
     margin: auto;
     list-style: none;
 }
@@ -257,11 +279,11 @@ section.tekens ul li:hover {
     opacity: 1;
 }
 
-/* *
+/*
  * ================================================================================
  * Cijfers sectie
  * ================================================================================
-* */
+*/
 section#cijfers {
     padding: 12rem 0;
 }
@@ -272,7 +294,7 @@ section#cijfers ul {
     flex-flow: row wrap;
     justify-content: center;
     width: 100%;
-    max-width: 70vw;
+    max-width: 80rem;
     margin: auto;
     list-style: none;
 }
@@ -297,11 +319,11 @@ section#cijfers ul li:hover {
     opacity: 1;
 }
 
-/* *
+/*
  * ================================================================================
  * Lettergrootte
  * ================================================================================
-* */
+*/
 section#lettergrootte ul {
     width: 100%;
     max-width: 50vw;
@@ -327,11 +349,11 @@ section#lettergrootte li:nth-of-type(4) { font-size: 2.5rem; }
 section#lettergrootte li:nth-of-type(5) { font-size: 2rem; }
 section#lettergrootte li:nth-of-type(6) { font-size: 1rem; }
 
-/* *
+/*
  * ================================================================================
  * Interactieve sectie
  * ================================================================================
-* */
+*/
 form {
     display: flex;
     flex-flow: column wrap;
@@ -342,7 +364,7 @@ form {
     background-color: var(--groen);
 }
 
-#text-input {
+#tekst {
     padding: 1rem 1.5rem;
     border: none;
     border-bottom: 1px solid #1e1e1e;
@@ -355,12 +377,12 @@ form {
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::placeholder */
-#text-input::placeholder {
+#tekst::placeholder {
     color: var(--beige);
     opacity: 0.2;
 }
 
-#text-input:focus {
+#tekst:focus {
     outline: none;
 }
 
@@ -409,7 +431,7 @@ fieldset label:hover {
 }
 
 fieldset input:checked + label {
-    background-color: var(--groen-geselecteerd);
+    background-color: var(--groen-35);
 }
 
 .hidden {
